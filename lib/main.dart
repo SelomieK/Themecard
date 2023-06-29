@@ -11,20 +11,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Assignment1',
+      title: 'Assignment1-themecard', //app name
       theme: ThemeData(
-          scaffoldBackgroundColor: Color.fromARGB(255, 220, 230, 139)),
+          scaffoldBackgroundColor: const Color.fromARGB(255, 130, 205, 140)),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Personal Card'),
           titleTextStyle: GoogleFonts.acme(fontSize: 25, color: Colors.black),
-          backgroundColor: Color.fromARGB(255, 171, 212, 242),
+          backgroundColor: const Color.fromARGB(255, 221, 226, 145),
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const SizedBox(height: 180),
+              const SizedBox(height: 180), //space between picture and title
               const CircleAvatar(
                 radius: 100.0,
                 backgroundColor: (Colors.black),
@@ -40,6 +40,7 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
               ),
               const Card(
+                //shadow and other properties for card
                 elevation: 10,
                 color: Color.fromARGB(255, 189, 223, 238),
                 margin: EdgeInsets.all(30),
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
                   child: ListTile(
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      // list of rich text columns to add contact detail with icon
                       children: [
                         SizedBox(height: 20),
                         Text.rich(
