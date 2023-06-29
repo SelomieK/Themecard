@@ -11,11 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Assignment 1',
+      title: 'Assignment1',
+      theme: ThemeData(
+          scaffoldBackgroundColor: Color.fromARGB(255, 220, 230, 139)),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Personal Card'),
-          titleTextStyle: GoogleFonts.acme(fontSize: 25),
+          titleTextStyle: GoogleFonts.acme(fontSize: 25, color: Colors.black),
+          backgroundColor: Color.fromARGB(255, 171, 212, 242),
         ),
         body: Center(
           child: Column(
@@ -32,19 +35,18 @@ class MyApp extends StatelessWidget {
                 'Selomie Kindu Ejigu',
                 style: GoogleFonts.kalam(fontSize: 25, color: Colors.black),
               ),
+              const Text(
+                'Software Engineering Student',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+              ),
               const Card(
-                elevation: 15,
+                elevation: 10,
                 color: Color.fromARGB(255, 189, 223, 238),
                 margin: EdgeInsets.all(30),
                 child: SizedBox(
                   width: 400,
-                  height: 180,
+                  height: 150,
                   child: ListTile(
-                    title: Text(
-                      'Software Engineering Student',
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
-                    ),
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -60,7 +62,7 @@ class MyApp extends StatelessWidget {
                                 ),
                               ),
                               TextSpan(
-                                text: ' E-mail: se223tz@student.lnu.se',
+                                text: '  E-mail: se223tz@student.lnu.se',
                               ),
                             ],
                           ),
@@ -77,7 +79,7 @@ class MyApp extends StatelessWidget {
                                 ),
                               ),
                               TextSpan(
-                                text: ' Phone: 0704887471',
+                                text: '  Phone: +46704887471',
                               ),
                             ],
                           ),
@@ -94,7 +96,7 @@ class MyApp extends StatelessWidget {
                                 ),
                               ),
                               TextSpan(
-                                text: ' Location: Gothenburg, Sweden',
+                                text: '  Location: Gothenburg, Sweden',
                               ),
                             ],
                           ),
